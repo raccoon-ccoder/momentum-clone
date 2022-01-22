@@ -1,3 +1,141 @@
+@import "reset.css";
+@import "variables.css";
+
+body {
+    color: white;
+}
+
+.main {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.login-form__input,
+#greeting {
+    border: none;
+    background: transparent;
+    font-size: 55px;
+    font-weight: 500;
+    color: white;
+}
+
+.login-form__input {
+    border-bottom: 2px solid white;
+    text-align: center;
+}
+
+.login-form__input::placeholder,
+.todo-form__input::placeholder {
+    color: white;
+}
+
+.login-form__input:focus,
+.todo-form__input:focus {
+    outline: none;
+}
+
+#clock {
+    font-size: 165px;
+    font-weight: 500;
+    align-items: center;
+}
+
 .hidden {
     display: none;
+}
+
+.backgronud-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.main-todo {
+    position: absolute;
+    left: 50%;
+    top: 70%;   /* 정중앙으로 하고 싶은 경우 top 50% */
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.main-todo__title {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#todo-list {
+    margin-top: 20px;
+}
+
+#todo-list li {
+    margin-bottom: 7px;
+}
+
+.todo-list__span{
+    font-size: 25px;
+}
+
+.todo-form__input {
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    border-bottom: 2px solid white;
+    text-align: center;
+    width: 350px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label::after{
+    content:'';
+    display: inline-block;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border:3px solid var(--text-gray);
+    border-radius: 5px;
+    position: relative;
+    top: 3px;
+    /* vertical-align: middle; 체크 전과 체크 후 높이 차이로 인한 설정 */
+}
+
+input[type="checkbox"]:checked + label::after {
+    content:'✔';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-color: #ffffff;
+    color: var(--text-gray);
+    position: relative;
+    top: -0.5px;
+}
+
+input[type="checkbox"]:checked ~ span {
+    color:  var(--text-gray);
+    text-decoration-line: line-through;
+}
+
+.todo-list_btn {
+    background: transparent;
+    border: none;
+    margin-left: 5px;
+    vertical-align: -2px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
 }

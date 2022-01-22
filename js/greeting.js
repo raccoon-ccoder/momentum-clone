@@ -17,7 +17,16 @@ function onLoginSubmit(event) {
 
 // 로그인을 한 경우 h1 태그에 사용자명을 보여주고 h1 class hidden을 제거하는 함수
 function paintGreetings(username) {
-    greeting.innerText = `Hello ${username}`;
+    let greetingMessage;
+    const now = new Date().getHours();
+    if(now < 6){
+        greetingMessage = "Good Evening";
+    }else if(now >= 6 && now < 12){
+        greetingMessage = "Good Morning";
+    }else if(now >= 12 && now < 18){
+        greetingMessage = "Good Afternoon";
+    }
+    greeting.innerText = `${greetingMessage}, ${username}.`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 

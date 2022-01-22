@@ -8,35 +8,54 @@
     <title>Momentum</title>
 </head>
 <body>
-    <form class="login-form hidden">
-        <input 
-            type="text" 
-            required
-            maxlength="15"
-            placeholder="What is your name?" 
-        />
-        <input type="submit" value="Log In">
-    </form>
-    <!-- input 유효성 검사 (required, maxlength..)를 위해선 form 태그 내부에 있어야 가능 -->
+    <div class="main">
+            <h2 id="clock"></h2>
 
-    <h2 id="clock"></h2>
-    <h1 id="greeting" class="hidden"></h1>
-
-    <form id="todo-form">
-        <input type="text" placeholder="Wrtie a To Do and Press Enter" required />
-    </form>
-
-    <ul id="todo-list">
-    </ul>
-
-    <div id="quote">
-        <span></span>
+            <form class="login-form hidden">
+                <input 
+                    type="text" 
+                    required
+                    maxlength="15"
+                    placeholder="What is your name?" 
+                    class="login-form__input"
+                />
+            </form>
+            <!-- input 유효성 검사 (required, maxlength..)를 위해선 form 태그 내부에 있어야 가능 -->
+    
+             <h1 id="greeting" class="hidden"></h1>
     </div>
 
+    <div class="main-todo">
+        <span class="main-todo__title">TODAY</span>
+        <form id="todo-form">
+            <input 
+                type="text" 
+                placeholder="Write a To Do and Press Enter" 
+                maxlength="20"
+                required
+                class="todo-form__input" 
+            />
+        </form>
+
+        <ul id="todo-list">
+        </ul>
+    </div>
+    
+    <div id="quote">
+    <span></span>
+    </div>
+
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+    
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quote.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="https://kit.fontawesome.com/f98d5103ee.js" crossorigin="anonymous"></script>
 </body>
 </html>

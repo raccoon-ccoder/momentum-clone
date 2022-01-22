@@ -3,6 +3,7 @@ const randomNumber = Math.floor(Math.random() * 6);
 // 방법 1
 const bgImage = document.createElement("img");
 bgImage.setAttribute("src", `img/${randomNumber}.jpg`);
+bgImage.className = "backgronud-img";
 document.body.appendChild(bgImage);
 
 // // 방법 2
