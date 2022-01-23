@@ -1,16 +1,24 @@
 @import "reset.css";
 @import "variables.css";
 
-body {
+html, body {
     color: white;
+    width: 100%;
+    height: 100%;
 }
 
 .main {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    width: 100%;
+    height: 47%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+}
+
+#clock {
+    font-size: 165px;
+    font-weight: 500;
 }
 
 .login-form__input,
@@ -37,12 +45,6 @@ body {
     outline: none;
 }
 
-#clock {
-    font-size: 165px;
-    font-weight: 500;
-    align-items: center;
-}
-
 .hidden {
     display: none;
 }
@@ -56,17 +58,31 @@ body {
 }
 
 .main-todo {
-    position: absolute;
-    left: 50%;
-    top: 70%;   /* 정중앙으로 하고 싶은 경우 top 50% */
-    transform: translate(-50%, -50%);
-    text-align: center;
+    width: 100%;
+    height: 53%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+    box-sizing: border-box;
 }
 
 .main-todo__title {
     font-size: 21px;
     font-weight: 700;
     margin-bottom: 20px;
+}
+
+.todo-form__input {
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    border-bottom: 2px solid white;
+    text-align: center;
+    width: 350px;
 }
 
 #todo-list {
@@ -79,17 +95,6 @@ body {
 
 .todo-list__span{
     font-size: 25px;
-}
-
-.todo-form__input {
-    border: none;
-    background: transparent;
-    font-size: 25px;
-    font-weight: 500;
-    color: white;
-    border-bottom: 2px solid white;
-    text-align: center;
-    width: 350px;
 }
 
 input[type="checkbox"] {
@@ -111,7 +116,6 @@ input[type="checkbox"] + label::after{
     border-radius: 5px;
     position: relative;
     top: 3px;
-    /* vertical-align: middle; 체크 전과 체크 후 높이 차이로 인한 설정 */
 }
 
 input[type="checkbox"]:checked + label::after {
@@ -138,4 +142,39 @@ input[type="checkbox"]:checked ~ span {
     color: white;
     font-size: 35px;
     cursor: pointer;
+}
+
+#weather {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#weather-icon {
+    position: absolute;
+    top: -5px;
+    right: 45px;
+    width: 60px;
+    height: 60px;
+}
+
+#weather-temp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#weather-city {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#quote {
+    position: absolute;
+    bottom: 20px;
 }
