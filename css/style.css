@@ -7,9 +7,117 @@ html, body {
     height: 100%;
 }
 
+.main-top {
+    width: 100%;
+    height: 65px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 270px;
+    height: 100%;
+}
+
+.links-text__logo {
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 15px;
+}
+
+.links-search {
+    width: 100%;
+    height: 100%;
+}
+
+.links-form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.links-form__underline {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    border-bottom: 2px solid white;
+}
+
+.fa-search {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    font-size: 15px;
+}
+
+.links-browser {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.fa-google {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+.fa-chevron-down {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    font-size: 5px;
+}
+
+.links-form__input {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    width: 150px;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    color: white;
+}
+
+#weather {
+    width: 100px;
+    height: 100%;
+    position: relative;
+}
+
+#weather-icon {
+  position: absolute;
+  top: -5px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+#weather-temp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+#weather-city {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    font-size: 13px;
+}
+
 .main {
     width: 100%;
-    height: 47%;
+    height: calc(47% - 40px);
     display: flex;
     justify-content: end;
     align-items: center;
@@ -59,7 +167,7 @@ html, body {
 
 .main-todo {
     width: 100%;
-    height: 53%;
+    height: calc(53% - 40px);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -142,36 +250,6 @@ input[type="checkbox"]:checked ~ span {
     color: white;
     font-size: 35px;
     cursor: pointer;
-}
-
-#weather {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-#weather-icon {
-    position: absolute;
-    top: -5px;
-    right: 45px;
-    width: 60px;
-    height: 60px;
-}
-
-#weather-temp {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 22px;
-    font-weight: 500;
-}
-
-#weather-city {
-    position: absolute;
-    top: 35px;
-    right: 10px;
-    font-size: 13px;
-    font-weight: 500;
 }
 
 #quote {
