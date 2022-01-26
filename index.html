@@ -21,9 +21,31 @@
                     <i class="fas fa-search"></i>
     
                     <div class="links-browser">
-                        <i class="fab fa-google"></i>
+                        <i class="fab fa-google links-browser__icon"></i>
                         <i class="fas fa-chevron-down"></i>
+
+                        <div class="browser-icons hidden">
+                            <span class="browser-icons__title">search with</span>
+                            
+                            <ul class="browser-icons__list">
+                                <li class="browser-icons__item">
+                                    <i class="fab fa-google browser-icons__icon"></i>
+                                    <span class="browser-icons__name">Google</span>
+                                </li>
+
+                                <li class="browser-icons__item">
+                                    <i class="fab fa-neos browser-icons__icon"></i>
+                                    <span class="browser-icons__name">Naver</span>
+                                </li>
+
+                                <li class="browser-icons__item">
+                                    <i class="fab fa-firefox-browser browser-icons__icon"></i>
+                                    <span class="browser-icons__name">Firefox</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+
                     <input type="text" class="links-form__input">
                 </form>
             </div>
@@ -79,6 +101,7 @@
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/links.js"></script>
     <script src="https://kit.fontawesome.com/f98d5103ee.js" crossorigin="anonymous"></script>
 </body>
 </html>

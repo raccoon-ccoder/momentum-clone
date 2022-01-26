@@ -42,11 +42,25 @@ html, body {
     height: 100%;
 }
 
+.links-form:hover .links-form__underline,
+.links-form:hover .links-browser,
+.links-form:hover .links-form__input {
+    opacity: 0.5;
+}
+
+.links-form:focus-within .links-form__underline,
+.links-form:focus-within .links-browser,
+.links-form:focus-within .links-form__input {
+    opacity: 1;
+}
+
 .links-form__underline {
     width: 100%;
     position: absolute;
     bottom: 5px;
     border-bottom: 2px solid white;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
 }
 
 .fa-search {
@@ -60,12 +74,15 @@ html, body {
     position: absolute;
     top: 10px;
     right: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
 }
 
-.fa-google {
+.links-browser__icon {
     position: absolute;
     right: 15px;
     top: 5px;
+    cursor: pointer;
 }
 
 .fa-chevron-down {
@@ -73,6 +90,54 @@ html, body {
     right: 0;
     top: 7px;
     font-size: 5px;
+    cursor: pointer;
+}
+
+.browser-icons {
+    position: absolute;
+    top: 40px;
+    right: -75px;
+    width: 120px;
+    height: 115px;
+    background-color: black;
+    border-radius: 0.4em;
+}
+
+.browser-icons::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-bottom-color: black;
+    border-top: 0;
+    border-left: 0;
+    margin-left: -40px;
+    margin-top: -15px;
+}
+
+.browser-icons__title {
+    color: gray;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 10px 0px 5px 10px;
+    display: block;
+}
+
+.browser-icons__item {
+    font-size: 14px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+.browser-icons__item:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.browser-icons__icon {
+    margin-right: 5px;
 }
 
 .links-form__input {
@@ -81,9 +146,16 @@ html, body {
     left: 20px;
     width: 150px;
     background-color: transparent;
-    border: none;
     font-size: 15px;
     color: white;
+    outline: none;
+    border: none;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.links-form__input:focus {
+    outline: none;
 }
 
 #weather {
