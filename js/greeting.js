@@ -19,12 +19,12 @@ function onLoginSubmit(event) {
 function paintGreetings(username) {
     let greetingMessage;
     const now = new Date().getHours();
-    if(now < 6){
-        greetingMessage = "Good Evening";
-    }else if(now >= 6 && now < 12){
+    if(now >= 6 && now < 12){
         greetingMessage = "Good Morning";
     }else if(now >= 12 && now < 18){
         greetingMessage = "Good Afternoon";
+    }else {
+        greetingMessage = "Good Evening";
     }
     greeting.innerText = `${greetingMessage}, ${username}.`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
