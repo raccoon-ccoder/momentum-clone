@@ -52,7 +52,7 @@ function paintToDo(newToDo) {
     li.appendChild(span);
     li.appendChild(button);
     
-    toDoList.appendChild(li);
+    toDoList.prepend(li);
 }
 
 // 사용자가 todo 작성 후 엔터 눌렀을 때 일어나는 함수
@@ -64,8 +64,8 @@ function handleToDoSubmit(event) {
         text: newToDo,
         id: Date.now()
     };    
-    toDos.push(TodoObj);
-    saveToDos();
+    toDos.unshift(TodoObj);
+    saveToDos(); 
     paintToDo(TodoObj);
 }
 

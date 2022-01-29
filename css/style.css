@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "variables.css";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 html, body {
     color: white;
@@ -135,6 +136,11 @@ html, body {
 
 .browser-icons__item:hover {
     background: rgba(255, 255, 255, 0.4);
+}
+
+#icon-daum {
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
 }
 
 .browser-icons__icon {
@@ -276,14 +282,28 @@ html, body {
 
 #todo-list {
     margin-top: 20px;
+    height: 145px;
+    overflow: scroll;
+    width: 410px;
+}
+
+#todo-list::-webkit-scrollbar {
+    display: none;
 }
 
 #todo-list li {
     margin-bottom: 7px;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
 }
 
 .todo-list__span{
-    font-size: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    width: 85%;
+    line-height: 40px;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 input[type="checkbox"] {
@@ -292,26 +312,28 @@ input[type="checkbox"] {
 
 input[type="checkbox"] + label {
     cursor: pointer;
+    line-height: 40px;
 }
 
 input[type="checkbox"] + label::after{
     content:'';
     display: inline-block;
     margin-right: 10px;
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     background-color: transparent;
-    border:3px solid var(--text-gray);
+    border: 2px solid var(--text-gray);
     border-radius: 5px;
     position: relative;
     top: 3px;
+    line-height: 12px;
 }
 
 input[type="checkbox"]:checked + label::after {
     content:'✔';
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     border-color: #ffffff;
     color: var(--text-gray);
     position: relative;
@@ -331,6 +353,7 @@ input[type="checkbox"]:checked ~ span {
     color: white;
     font-size: 35px;
     cursor: pointer;
+    line-height: 40px;
 }
 
 #quote {
