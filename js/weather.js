@@ -24,7 +24,7 @@ function onGeoOk(positon) {
             const icon = document.querySelector("#weather-icon");
             const temp = document.querySelector("#weather-temp");
             temp.innerText = `${data.main.temp.toFixed(0)}°`;
-            icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+            icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         });
     });
 }
