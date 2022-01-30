@@ -8,6 +8,10 @@ html, body {
     height: 100%;
 }
 
+body {
+    min-height: 750px;
+}
+
 .main-top {
     width: 100%;
     height: 65px;
@@ -256,7 +260,7 @@ html, body {
     width: 100%;
     height: calc(53% - 40px);
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     padding-top: 80px;
@@ -356,7 +360,101 @@ input[type="checkbox"]:checked ~ span {
     line-height: 40px;
 }
 
-#quote {
-    position: absolute;
-    bottom: 20px;
+@media screen and (max-width:500px) {
+    body {
+        min-height: unset;
+    }
+    
+    #clock {
+        font-size: 120px;
+    }
+
+    .login-form__input, #greeting {
+        text-align: center;
+        font-size: 27px;
+    }
+
+    .main-todo {
+    padding-top: 50px;
+    }
+
+    .todo-form__input {
+        font-size: 18px;
+        width: 320px;
+    }
+
+    #todo-list {
+        width: 330px;
+        height: 220px;
+    }
+
+    #todo-list li {
+        margin-bottom: 2px;
+    }
+
+    input[type="checkbox"] + label::after {
+        width: 11px;
+        height: 11px;
+        margin-right: 7px;
+        top: 1px;
+    }
+
+    input[type="checkbox"]:checked + label::after {
+        width: 11px;
+        height: 11px;
+    }
+
+    .todo-list__span {
+        font-size: 15px;
+        width: 90%;
+        line-height: 37px;
+    }
+
+    .todo-list_btn {
+        margin-left: 0px;
+        padding: 0;
+        font-size: 25px;
+    }
+
+    #quote {
+        display: none;
+    }
+
+    
+}
+
+@media screen and (max-width:768px) {
+    #clock {
+        font-size: 120px;
+    }
+
+    .login-form__input, #greeting {
+        text-align: center;
+        font-size: 27px;
+    }
+
+    .main-todo {
+        justify-content: flex-start;
+    }
+
+    .todo-form__input {
+        font-size: 20px;
+    }
+
+    #todo-list {
+        height: 200px;
+    }
+
+    #quote {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #greeting {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
 }
