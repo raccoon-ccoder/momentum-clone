@@ -12,7 +12,7 @@ function onGeoOk(positon) {
     .then(response => response.json())
     .then(data =>{
         const cityName = data.results[9].formatted_address.split(" ")[0].replace(",","");
-        const city = document.querySelector("#weather-city");
+        const city = document.querySelector(".weather__city");
         city.innerText = cityName;
 
         const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${WEATHER_API_KEY}&units=metric`;
@@ -21,8 +21,8 @@ function onGeoOk(positon) {
         fetch(weatherUrl)
         .then(response => response.json())
         .then(data => {
-            const icon = document.querySelector("#weather-icon");
-            const temp = document.querySelector("#weather-temp");
+            const icon = document.querySelector(".weather__icon");
+            const temp = document.querySelector(".weather__temp");
             temp.innerText = `${data.main.temp.toFixed(0)}°`;
             icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         });

@@ -10,91 +10,91 @@
 </head>
 <body>
 
-    <div class="main-top">
-        <div class="links">
-            <div class="links-text">
-                <span class="links-text__logo">Links</span>
+    <div class="header">
+        <div class="search">
+            <div>
+                <span class="search__title">Links</span>
             </div>
     
-            <div class="links-search">
-                <form class="links-form">
-                    <span class="links-form__underline"></span>
+            <div class="search__inner">
+                <form class="search__form">
+                    <span class="search__underline"></span>
                     <i class="fas fa-search"></i>
     
-                    <div class="links-browser">
-                        <i class="links-browser__icon fab fa-google" id="link-google"></i>
+                    <div class="search__icons">
+                        <i class="search-icon fab fa-google" id="link-google"></i>
                         <i class="fas fa-chevron-down"></i>
 
-                        <div class="browser-icons hidden">
-                            <span class="browser-icons__title">search with</span>
+                        <div class="browsers hidden">
+                            <span class="browsers__title">search with</span>
                             
-                            <ul class="browser-icons__list">
-                                <li class="browser-icons__item" id="icon-google">
-                                    <i class="fab fa-google browser-icons__icon"></i>
-                                    <span class="browser-icons__name">Google</span>
+                            <ul class="browsers__list">
+                                <li class="browsers__item" id="icon-google">
+                                    <i class="fab fa-google browsers__icon"></i>
+                                    <span class="browsers__name">Google</span>
                                 </li>
 
-                                <li class="browser-icons__item" id="icon-naver">
-                                    <i class="fab fa-neos browser-icons__icon"></i>
-                                    <span class="browser-icons__name">Naver</span>
+                                <li class="browsers__item" id="icon-naver">
+                                    <i class="fab fa-neos browsers__icon"></i>
+                                    <span class="browsers__name">Naver</span>
                                 </li>
 
-                                <li class="browser-icons__item" id="icon-daum">
-                                    <i class="fab fa-dochub browser-icons__icon"></i>
-                                    <span class="browser-icons__name">Daum</span>
+                                <li class="browsers__item" id="icon-daum">
+                                    <i class="fab fa-dochub browsers__icon"></i>
+                                    <span class="browsers__name">Daum</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <input type="text" class="links-form__input">
+                    <input type="text" class="search__input">
                 </form>
             </div>
         </div>
 
-        <div id="weather">
-            <img id="weather-icon"></img>
-            <span id="weather-temp"></span>
-            <span id="weather-city"></span>
+        <div class="weather">
+            <img class="weather__icon"></img>
+            <span class="weather__temp"></span>
+            <span class="weather__city"></span>
         </div>
     </div>
 
     <div class="main">
-            <h2 id="clock"></h2>
+            <h2 class="main__clock"></h2>
 
-            <form class="login-form hidden">
+            <form class="hidden">
                 <input 
                     type="text" 
                     required
                     maxlength="15"
                     placeholder="What is your name?" 
-                    class="login-form__input"
+                    class="main__login"
                 />
             </form>
             <!-- input 유효성 검사 (required, maxlength..)를 위해선 form 태그 내부에 있어야 가능 -->
     
-             <h1 id="greeting" class="hidden">
-                 <span class="greeting__time"></span>
-                 <span class="greeting__name"></span>
+             <h1 class="main__inner hidden">
+                 <span class="main__greeting"></span>
+                 <span class="main__name"></span>
              </h1>
     </div>
 
-    <div class="main-todo">
-        <span class="main-todo__title">TODAY</span>
-        <form id="todo-form">
+    <div class="todo">
+        <span class="todo__title">TODAY</span>
+        <form class="todo__form">
             <input 
                 type="text" 
                 placeholder="Write a To Do and Press Enter" 
                 maxlength="20"
                 required
-                class="todo-form__input" 
+                class="todo__input" 
             />
         </form>
 
-        <ul id="todo-list">
+        <ul class="todo__list">
         </ul>
 
-        <div id="quote">
+        <div class="quote">
             <span></span>
         </div>
     </div>

@@ -1,8 +1,8 @@
-const linkBtn = document.querySelector(".links-browser__icon");
-const linkBox = document.querySelector(".browser-icons");
-const linkForm = document.querySelector(".links-form");
-const linkIcon = document.querySelectorAll(".browser-icons__item");
-const linkInput = document.querySelector(".links-form__input");
+const linkBtn = document.querySelector(".search-icon");
+const linkBox = document.querySelector(".browsers");
+const linkForm = document.querySelector(".search__form");
+const linkIcon = document.querySelectorAll(".browsers__item");
+const linkInput = document.querySelector(".search__input");
 const linkSelectIcon = document.querySelector(".fa-chevron-down");
 
 const NOT_CLICKED_CLASS = "hidden";
@@ -52,7 +52,7 @@ linkBox.classList.add("hidden");
 
 function changeLinkIcon(event) {
     const changeLinkName = event.target.parentElement.id;
-    const selectedLink = document.querySelector(".links-browser__icon");
+    const selectedLink = document.querySelector(".search-icon");
     const selectedLinkArray = selectedLink.classList;
     let selectedLinkId = selectedLink.id;
 
@@ -83,9 +83,9 @@ linkIcon.forEach(item => item.addEventListener("click", changeLinkIcon));
 
 function searchWords(event){
     event.preventDefault();
-    const keyWords = document.querySelector(".links-form__input").value;
-    document.querySelector(".links-form__input").value = "";
-    const choosedLink = document.querySelector(".links-browser__icon").id;
+    const keyWords = document.querySelector(".search__input").value;
+    document.querySelector(".search__input").value = "";
+    const choosedLink = document.querySelector(".search-icon").id;
 
     switch(choosedLink) {
         case "link-google":

@@ -17,7 +17,7 @@ input[type="text"] {
     -webkit-border-radius: 0;
 }
 
-.main-top {
+.header {
     width: 100%;
     height: 65px;
     padding: 10px 20px;
@@ -27,7 +27,7 @@ input[type="text"] {
     align-items: center;
 }
 
-.links {
+.search {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,36 +35,36 @@ input[type="text"] {
     height: 100%;
 }
 
-.links-text__logo {
+.search__title {
     font-size: 18px;
     font-weight: 500;
     padding-right: 15px;
 }
 
-.links-search {
+.search__inner {
     width: 100%;
     height: 100%;
 }
 
-.links-form {
+.search__form {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.links-form:hover .links-form__underline,
-.links-form:hover .links-browser,
-.links-form:hover .links-form__input {
+.search__form:hover .search__underline,
+.search__form:hover .search__icons,
+.search__form:hover .search__input {
     opacity: 0.5;
 }
 
-.links-form:focus-within .links-form__underline,
-.links-form:focus-within .links-browser,
-.links-form:focus-within .links-form__input {
+.search__form:focus-within .search__underline,
+.search__form:focus-within .search__icons,
+.search__form:focus-within .search__input {
     opacity: 1;
 }
 
-.links-form__underline {
+.search__underline {
     width: 100%;
     position: absolute;
     bottom: 5px;
@@ -80,7 +80,7 @@ input[type="text"] {
     font-size: 15px;
 }
 
-.links-browser {
+.search__icons {
     position: absolute;
     top: 10px;
     right: 0;
@@ -88,7 +88,7 @@ input[type="text"] {
     transition: all 0.4s ease-in-out;
 }
 
-.links-browser__icon {
+.search-icon {
     position: absolute;
     right: 15px;
     top: 5px;
@@ -103,7 +103,7 @@ input[type="text"] {
     cursor: pointer;
 }
 
-.browser-icons {
+.browsers {
     position: absolute;
     top: 40px;
     right: -75px;
@@ -113,7 +113,7 @@ input[type="text"] {
     border-radius: 0.4em;
 }
 
-.browser-icons::after {
+.browsers::after {
     content: '';
     position: absolute;
     top: 0;
@@ -128,7 +128,7 @@ input[type="text"] {
     margin-top: -15px;
 }
 
-.browser-icons__title {
+.browsers__title {
     color: gray;
     font-size: 10px;
     text-transform: uppercase;
@@ -136,14 +136,14 @@ input[type="text"] {
     display: block;
 }
 
-.browser-icons__item {
+.browsers__item {
     font-size: 14px;
     width: 100%;
     height: 30px;
     display: flex;
 }
 
-.browser-icons__item:hover {
+.browsers__item:hover {
     background: rgba(255, 255, 255, 0.4);
 }
 
@@ -152,19 +152,19 @@ input[type="text"] {
     border-bottom-right-radius: 0.4em;
 }
 
-.browser-icons__icon {
+.browsers__icon {
     width: 30%;
     text-align: center;
     line-height: 30px;
 }
 
-.browser-icons__name {
+.browsers__name {
     display: block;
     width: 70%;
     line-height: 30px;
 }
 
-.links-form__input {
+.search__input {
     position: absolute;
     top: 13px;
     left: 20px;
@@ -178,17 +178,17 @@ input[type="text"] {
     transition: all 0.4s ease-in-out;
 }
 
-.links-form__input:focus {
+.search__input:focus {
     outline: none;
 }
 
-#weather {
+.weather {
     width: 100px;
     height: 100%;
     position: relative;
 }
 
-#weather-icon {
+.weather__icon {
   position: absolute;
   top: -5px;
   left: 15px;
@@ -196,7 +196,7 @@ input[type="text"] {
   height: 40px;
 }
 
-#weather-temp {
+.weather__temp {
     position: absolute;
     top: 0;
     right: 0;
@@ -204,7 +204,7 @@ input[type="text"] {
     font-weight: 500;
 }
 
-#weather-city {
+.weather__city {
     position: absolute;
     bottom: 3px;
     right: 3px;
@@ -220,13 +220,13 @@ input[type="text"] {
     flex-direction: column;
 }
 
-#clock {
+.main__clock {
     font-size: 165px;
     font-weight: 500;
 }
 
-.login-form__input,
-#greeting {
+.main__login,
+.main__inner {
     border: none;
     background: transparent;
     font-size: 55px;
@@ -234,18 +234,18 @@ input[type="text"] {
     color: white;
 }
 
-.login-form__input {
+.main__login {
     border-bottom: 2px solid white;
     text-align: center;
 }
 
-.login-form__input::placeholder,
-.todo-form__input::placeholder {
+.main__login::placeholder,
+.todo__input::placeholder {
     color: white;
 }
 
-.login-form__input:focus,
-.todo-form__input:focus {
+.main__login:focus,
+.todo__input:focus {
     outline: none;
 }
 
@@ -261,7 +261,7 @@ input[type="text"] {
     z-index: -1;
 }
 
-.main-todo {
+.todo {
     width: 100%;
     height: calc(53% - 40px);
     display: flex;
@@ -272,13 +272,13 @@ input[type="text"] {
     box-sizing: border-box;
 }
 
-.main-todo__title {
+.todo__title {
     font-size: 21px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.todo-form__input {
+.todo__input {
     border: none;
     background: transparent;
     font-size: 25px;
@@ -289,25 +289,25 @@ input[type="text"] {
     width: 350px;
 }
 
-#todo-list {
+.todo__list {
     margin-top: 20px;
     height: 145px;
     overflow: scroll;
     width: 410px;
 }
 
-#todo-list::-webkit-scrollbar {
+.todo__list::-webkit-scrollbar {
     display: none;
 }
 
-#todo-list li {
+.todo__list li {
     margin-bottom: 7px;
     border-bottom: 1px solid;
     display: flex;
     justify-content: space-between;
 }
 
-.todo-list__span{
+.todo__text {
     font-size: 18px;
     font-weight: 700;
     width: 85%;
@@ -354,7 +354,7 @@ input[type="checkbox"]:checked ~ span {
     text-decoration-line: line-through;
 }
 
-.todo-list_btn {
+.todo__button {
     background: transparent;
     border: none;
     margin-left: 5px;
@@ -370,32 +370,32 @@ input[type="checkbox"]:checked ~ span {
         min-height: unset;
     }
     
-    #clock {
+    .main__clock {
         font-size: 120px;
     }
 
-    .login-form__input, #greeting {
+    .main__login, .main__inner {
         text-align: center;
         font-size: 27px;
     }
 
-    .main-todo {
-    padding-top: 50px;
+    .todo {
+        padding-top: 50px;
     }
 
-    .todo-form__input {
+    .todo__input {
         font-size: 18px;
         width: 320px;
     }
 
-    #todo-list {
+    #todo__list {
         width: 330px;
-        height: 220px;
+.      height: 220px;
     }
 
-    #todo-list li {
+    #todo__list li {
         margin-bottom: 2px;
-    }
+.  }
 
     input[type="checkbox"] {
         display: none;
@@ -432,23 +432,23 @@ input[type="checkbox"]:checked ~ span {
         top: -0.5px;
     }
 
-    .todo-list__span {
+    .todo__text {
         font-size: 15px;
         width: 90%;
         line-height: 37px;
     }
 
-    .todo-list_btn {
+    .todo__button {
         margin-left: 0px;
         padding: 0;
         font-size: 25px;
     }
 
-    #quote {
+    .quote {
         display: none;
     }
 
-    .links-form__input {
+    .search__input {
         position: absolute;
         top: 13px;
         left: 20px;
@@ -466,32 +466,32 @@ input[type="checkbox"]:checked ~ span {
 }
 
 @media screen and (max-width:768px) {
-    #clock {
+    .main__clock {
         font-size: 120px;
     }
 
-    .login-form__input, #greeting {
+    .main__login, .main__inner {
         text-align: center;
         font-size: 27px;
     }
 
-    .main-todo {
+    .todo {
         justify-content: flex-start;
     }
 
-    .todo-form__input {
+    .todo__input {
         font-size: 20px;
     }
 
-    #todo-list {
+    .todo__list {
         height: 200px;
     }
 
-    #quote {
+    .quote {
         display: none;
     }
 
-    .links-form__input {
+    .search__input {
         position: absolute;
         top: 13px;
         left: 20px;
@@ -548,7 +548,7 @@ input[type="checkbox"]:checked ~ span {
 }
 
 @media screen and (max-width:1200px) {
-    #greeting {
+    .main__inner {
        display: flex;
        justify-content: center;
        align-items: center;

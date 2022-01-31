@@ -1,6 +1,6 @@
-const toDoForm = document.getElementById("todo-form");
+const toDoForm = document.querySelector(".todo__form");
 const toDoInput = toDoForm.querySelector("input");
-const toDoList = document.getElementById("todo-list");
+const toDoList = document.querySelector(".todo__list");
 
 const TODOS_KEY = "todos";
 
@@ -40,11 +40,11 @@ function paintToDo(newToDo) {
     label.htmlFor = `input-${newToDo.id}`;
 
     const span = document.createElement("span");
-    span.className = "todo-list__span";
+    span.className = "todo__text";
     span.innerText = newToDo.text;
 
     const button = document.createElement("button");
-    button.className = "todo-list_btn";
+    button.className = "todo__button";
     button.innerText = "×";
     button.addEventListener("click", deleteToDo);
     li.appendChild(checkbox);
