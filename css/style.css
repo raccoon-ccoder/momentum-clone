@@ -388,14 +388,14 @@ input[type="checkbox"]:checked ~ span {
         width: 320px;
     }
 
-    #todo__list {
+    .todo__list {
         width: 330px;
-.      height: 220px;
+      height: 220px;
     }
 
-    #todo__list li {
+    .todo__list li {
         margin-bottom: 2px;
-.  }
+      }
 
     input[type="checkbox"] {
         display: none;
