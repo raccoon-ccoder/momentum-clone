@@ -10,6 +10,8 @@
   - 원하는 사이트 선택 및 검색 기능
 - 사용 기술
   - HTML, CSS, JavaScript
+- 프로젝트 둘러보기
+  - [ToDoList 바로가기](https://raccoon-ccoder.github.io/momentum-clone/)
 
 ## 스크린샷
 ### 로그인
