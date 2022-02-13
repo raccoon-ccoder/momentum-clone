@@ -9,7 +9,31 @@ const NOT_CLICKED_CLASS = "hidden";
 
 function toggle(event) {
     linkBox.classList.toggle(NOT_CLICKED_CLASS);
+    document.querySelector("body").addEventListener("click", closeBrowserBox);
     linkInput.focus();
+}
+
+function closeBrowserBox(event) {
+    const target = event.target;
+
+    if(target == event.currentTarget.querySelector(".search-icon")) {
+        return;
+    }
+    if(target == event.currentTarget.querySelector(".fa-chevron-down")) {
+        return;
+    }
+    if(target == event.currentTarget.querySelector(".browsers__title")) {
+        return;
+    }
+    if(target == event.currentTarget.querySelector(".browsers__item")) {
+        return;
+    }if(target == event.currentTarget.querySelector(".browsers__icon")) {
+        return;
+    }
+
+    if(!linkBox.classList.contains(NOT_CLICKED_CLASS)){
+        linkBox.classList.add(NOT_CLICKED_CLASS);
+    }
 }
 
 linkBtn.addEventListener("click", toggle);
@@ -26,19 +50,19 @@ function changeLinkIcon(event) {
         case "icon-google":
             selectedLinkArray.remove(selectedLinkArray[2]);
             selectedLinkArray.add("fa-google");
-            selectedLink.id = "link-google";
+            selectedLinkId = "link-google";
             break;
 
         case "icon-naver":
             selectedLinkArray.remove(selectedLinkArray[2]);
             selectedLinkArray.add("fa-neos");
-            selectedLink.id = "link-naver";
+            selectedLinkId = "link-naver";
             break;
 
         case "icon-daum":
             selectedLinkArray.remove(selectedLinkArray[2]);
             selectedLinkArray.add("fa-dochub");
-            selectedLink.id = "link-daum";
+            selectedLinkId = "link-daum";
             break;
     }
     linkBox.classList.add(NOT_CLICKED_CLASS);
